@@ -7,4 +7,4 @@ def uppercase(c):
         else:
             value += i
     else:
-        print(value)
+        print(value.format())

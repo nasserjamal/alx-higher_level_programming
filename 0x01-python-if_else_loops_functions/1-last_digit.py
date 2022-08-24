@@ -3,7 +3,7 @@ import math
 import random
 number = random.randint(-10000, 10000)
 lastDigit = math.fmod(number, 10)
-string = f"Last digit of {number} is {lastDigit}"
+string = f"Last digit of {number:d} is {lastDigit:d}"
 if lastDigit > 5:
     print(string, "and is greater than 5")
 elif lastDigit == 0:

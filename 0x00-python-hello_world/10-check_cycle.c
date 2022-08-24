@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * check_cycle - checks if a singly linked list has a cycle in it
@@ -16,6 +17,7 @@ int check_cycle(listint_t *list)
 	fast = list->next;
 	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
+		printf("%d and %d\n", slow->n, fast->n);
 		if (slow == fast)
 			return (1);
 		fast = fast->next->next;

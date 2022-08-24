@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    numbers = range(0, 101)
+    numbers = range(1, 101)
     for i in numbers:
         if i % 3 == 0 and i % 5 == 0:
             print("FizzBuzz", end=" ")

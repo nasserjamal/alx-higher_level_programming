@@ -3,7 +3,7 @@ def new_in_list(my_list, idx, element):
     if idx < 0:
         return my_list.copy()
     if idx >= len(my_list):
-        return my_list.copy
+        return my_list.copy()
     copyOfList = my_list.copy()
     copyOfList[idx] = element
     return copyOfList

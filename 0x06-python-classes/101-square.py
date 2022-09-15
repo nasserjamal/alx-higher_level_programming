@@ -63,6 +63,7 @@ integers")
                     ans += " "
                 for column in range(0, self.__size):
                     ans += "#"
-                if row != self.__size - 1:
-                    ans += "\n"
+                ans += "\n"
+        if len(ans) >= 2:
+            ans = ans[:-2]
         return ans

@@ -65,5 +65,5 @@ integers")
                     ans += "#"
                 ans += "\n"
         if len(ans) >= 2:
-            ans = ans[:-2]
+            ans = ans[:-1]
         return ans

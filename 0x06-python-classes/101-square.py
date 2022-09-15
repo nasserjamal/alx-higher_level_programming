@@ -64,6 +64,6 @@ integers")
                 for column in range(0, self.__size):
                     ans += "#"
                 ans += "\n"
-        if len(ans) >= 2:
+        if len(ans) >= 1:
             ans = ans[:-1]
         return ans

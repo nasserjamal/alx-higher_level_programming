@@ -1,0 +1,42 @@
+This is a doctest file for 0-add_integer.py
+
+Contains test for the class add_integer
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+Testing with 2 positive numbers
+>>> add_integer(2, 3)
+5
+
+Testing with a positive and a negative number
+>>> add_integer(-2, 1)
+-1
+
+Testing with one of the args as 0
+>>> add_integer(6, 0)
+6
+
+Testing with float datatypes
+>>> add_integer(2.8, 5.0)
+7
+
+Testing with one of its args as string
+>>> add_integer(2, "Ttest")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+
+Testing with one of its args as None
+>>> add_integer(2, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(2, float('nan'))
+Traceback (most recent call last):
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+

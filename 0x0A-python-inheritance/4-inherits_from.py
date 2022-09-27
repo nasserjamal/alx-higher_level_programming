@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+"""My list module"""
+
+
+def is_kind_of_class(obj, a_class):
+    """Checks if the object is a subclass of the class"""
+    return issubclass(obj, a_class)

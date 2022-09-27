@@ -19,11 +19,12 @@ Checking with multiple appends. Unsorted array
     >>> my_list.append(4)
     >>> my_list.append(8)
     >>> print(my_list)
-    [5, 2, 4, 7]
+    [5, 2, 4, 8]
     >>> my_list.print_sorted()
     [2, 4, 5, 8]
 
 Checking with a sorted array
+    >>> my_list = MyList()
     >>> my_list.append(1)
     >>> my_list.append(2)
     >>> my_list.append(3)

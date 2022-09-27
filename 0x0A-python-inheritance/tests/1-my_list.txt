@@ -12,6 +12,7 @@ Checking with an empty List:
     []
     >>> my_list.print_sorted()
     []
+    []
 
 Checking with multiple appends. Unsorted array
     >>> my_list.append(5)
@@ -22,6 +23,7 @@ Checking with multiple appends. Unsorted array
     [5, 2, 4, 8]
     >>> my_list.print_sorted()
     [2, 4, 5, 8]
+    [2, 4, 5, 8]
 
 Checking with a sorted array
     >>> my_list = MyList()
@@ -30,6 +32,7 @@ Checking with a sorted array
     >>> my_list.append(3)
     >>> my_list.append(4)
     >>> my_list.print_sorted()
+    [1, 2, 3, 4]
     [1, 2, 3, 4]
 
 Checking with negative numbers (Unsorted)
@@ -40,7 +43,14 @@ Checking with negative numbers (Unsorted)
     >>> my_list.append(-5)
     >>> my_list.print_sorted()
     [-7, -5, 0, 7]
+    [-7, -5, 0, 7]
 
 Check if a new list is returned
-    >>> my_list.print_sorted is my_list
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(4)
+    >>> my_list.print_sorted() is my_list
+    [1, 2, 3, 4]
     False

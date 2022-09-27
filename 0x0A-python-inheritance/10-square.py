@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """This module contains defination for Square class"""
-from curses.textpad import rectangle
-
-
 Rectangle = __import__("9-rectangle").BaseGeometry
 
 

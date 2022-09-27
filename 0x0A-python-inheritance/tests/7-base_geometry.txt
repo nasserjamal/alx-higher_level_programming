@@ -32,6 +32,13 @@ Passing value as tuples:
     ...
     TypeError: b must be an integer
 
+Passing value as list:
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("b", {1, 2, 3})
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
 
 Passing value as None:
     >>> b = BaseGeometry()
@@ -65,6 +72,13 @@ Passing value to be less than 0
 
 Passing value as an integer greater than 0
     >>> b.integer_validator("b", 5)
+
+
+Passing value as 0
+    >>> b.integer_validator("b", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: b must be greater than 0
 
 
 Testing area method

@@ -42,7 +42,5 @@ Checking with negative numbers (Unsorted)
     [-7, -5, 0, 7]
 
 Check if a new list is returned
-    >>> temp_list = [-7, -5, 0, 7]
-    >>> my_list = temp_list
-    >>> my_list is temp_list
-    True
+    >>> my_list.print_sorted is my_list
+    False

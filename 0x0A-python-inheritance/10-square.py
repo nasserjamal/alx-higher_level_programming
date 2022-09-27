@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """This module contains defination for Square class"""
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+from curses.textpad import rectangle
 
 
-class Square(BaseGeometry):
+Rectangle = __import__("9-rectangle").BaseGeometry
+
+
+class Square(Rectangle):
     """Class containing the defination of a square"""
 
     def __init__(self, size):

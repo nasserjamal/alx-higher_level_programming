@@ -1,0 +1,22 @@
+Test file for 7-base_geometry.py
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Passing value as non integer:
+    >>> b = BaseGeometry()
+    >>> b.integer_validator("b", "bbb")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+
+
+Passing value to be less than 0
+    >>> b.integer_validator("b", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: b must be greater than 0
+
+
+Passing value as an integer greater than 0
+    >>> b.integer_validator("b", 5)

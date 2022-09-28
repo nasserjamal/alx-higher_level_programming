@@ -2,9 +2,6 @@
 """Module containing the student class"""
 
 
-from unittest import result
-
-
 class Student:
     """Classdefining theproperties of a student"""
     def __init__(self, first_name, last_name, age):

@@ -2,6 +2,7 @@
 """Rectangle module"""
 
 
+from array import array
 from models.base import Base
 
 
@@ -14,6 +15,9 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    def __str__(self) -> str:
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
     # Width Getter and setter
     @property
@@ -66,3 +70,38 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        return self.__height * self.__width
+
+    def display(self):
+        [print("") for pos_y in range(0, self.__y)]
+        for row in range(0, self.__height):
+            [print(" ", end="") for pos_x in range(0, self.__x)]
+            [print("#", end="") for col in range(0, self.__width)]
+            print("")
+
+    def update(self, *args, **kwargs):
+        for key, val in kwargs.items():
+            if (f"_Rectangle__{key}" in self.__dict__):
+                if key == "id":
+                    self.id = val
+                elif key == "width":
+                    self.width = val
+                elif key == "height":
+                    self.height = val
+                elif key == "x":
+                    self.x = val
+                elif key == "y":
+                    self.y = val
+        for idx, arg in enumerate(args):
+            if idx == 0:
+                self.id = arg
+            elif idx == 1:
+                self.width = arg
+            elif idx == 2:
+                self.height = arg
+            elif idx == 3:
+                self.x = arg
+            elif idx == 4:
+                self.y = arg

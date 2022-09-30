@@ -2,6 +2,9 @@
 """The base module: Contains the base class"""
 
 
+import json
+
+
 class Base:
     """This class is the base for all other classes.
     It's function is to manage id attribute of all other classes
@@ -14,3 +17,6 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = self.__class__.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        return json.dumps(list_dictionaries)

@@ -114,3 +114,7 @@ class test_Rectangle(unittest.TestCase):
         self.my_rect.update(x=1, height=2, y=3, width=4)
         self.assertEqual(str(self.my_rect), "[Rectangle] ({}) \
 {}/{} - {}/{}".format(19, 1, 3, 4, 2))
+
+    def test_to_dictionary(self):
+        """Testing the to_dictionary method"""
+        self.assertEqual(self.my_rect.to_dictionary(), {'id': 10, 'width': 3, 'height': 2, 'x': 1, 'y': 1})

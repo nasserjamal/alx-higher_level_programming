@@ -7,6 +7,9 @@ function getI (myList) {
     let y = myListLength - 1;
     while (myList[y] === myList[y - 1]) {
       y -= 1;
+      if (y - 1 === -1) {
+        return -1;
+      }
     }
     i = y - 1;
     return i;
@@ -22,7 +25,7 @@ function secondBiggest (myList) {
   const myListLength = myList.length;
   const sndLastIndex = i;
 
-  if (myListLength === 0 || myListLength === 1) {
+  if (myListLength === 0 || myListLength === 1 || sndLastIndex === -1) {
     console.log('0');
   } else {
     console.log(myList[sndLastIndex]);

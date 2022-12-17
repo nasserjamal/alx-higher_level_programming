@@ -3,7 +3,7 @@
 
 
 if (__name__ == "__main__"):
-    import urllib
+    import urllib.request
     url = "https://alx-intranet.hbtn.io/status"
     with urllib.request.urlopen(url) as response:
         body = response.read()

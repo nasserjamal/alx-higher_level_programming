@@ -9,9 +9,10 @@ if __name__ == "__main__":
     import sys
     import requests
     msg = ""
+    url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) > 1:
-        msg = sys.argv[1] 
-    response = requests.post("http://0.0.0.0:5000/search_user",params={'q': msg})
+        msg = sys.argv[1]
+    response = requests.post(url, params={'q': msg})
     try:
         jsonData = response.json()
         if len(jsonData) > 0:
@@ -20,4 +21,3 @@ if __name__ == "__main__":
             print(f"[{jsonData.get('id')}] {jsonData.get('name')}")
     except requests.exceptions.JSONDecodeError as e:
         print("Not a valid JSON")
-
